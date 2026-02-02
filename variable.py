@@ -25,3 +25,28 @@ def myfunc1():
     print(e)
 myfunc1()
 print(e)
+p = e.capitalize()
+print(p)
+print(p.casefold())
+
+#file handle
+f = open('demotext.txt')
+print(f.read())
+
+#use with Keyowords
+with open('demotext.txt') as f:
+ print(f.read())
+
+ #
+ with open('demotext.txt') as f:
+    print(f.read(10))
+
+#use append using 
+text = 'Now add to New Words'
+with open('demotext.txt', 'r') as f:
+    checked = f.read()
+if text not in checked :
+    with open('demotext.txt', 'a') as f:
+        f.write(text+'\n')
+with open('demotext.txt') as f:
+    print(f.read())
